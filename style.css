@@ -1,271 +1,372 @@
-* {
-  box-sizing: border-box;
-}
+@charset "utf-8";
 
+/* ========================================
+    リセットcss
+========================================= */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html{overflow-y: scroll;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after {content: ''; content: none;}
+input, textarea,{margin: 0; padding: 0;}
+ol, ul{list-style:none;}
+table{border-collapse: collapse; border-spacing:0;}
+caption, th{text-align: left;}
+a:focus {outline:none;}
+
+
+/* ========================================
+    全体設定
+========================================= */
 body {
-  margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN";
+	color:#474747;
+	font-size: 14px;
+	line-height: 1.4em;
+	font-family: "メイリオ", "Meiryo", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  text-decoration: none;
+	color:#474747;
+	text-decoration:none;
 }
 
-.container {
-  width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
+
+/* micro clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {clear: both;}
+.cf {*zoom: 1;}
+
+
+/* ========================================
+    ヘッダー
+========================================= */
+
+header{
+	width: 100%;
+	height: 36px;
+	border-top: 4px solid #e66464;
+	padding: 25px 0;
 }
 
-.top-wrapper {
-  padding: 180px 0 100px 0;
-  background-image: url(top.png);
-  background-size: cover;
-  color: white;
-  text-align: center;
+div#header_inner{
+	width: 978px;
+	height: 36px;
+	
+	margin: 0 auto;
+
 }
 
-.top-wrapper h1 {
-  opacity: 0.7;
-  font-size: 45px;
-  letter-spacing: 5px;
+header h1{
+	float: left;
 }
 
-.top-wrapper p {
-  opacity: 0.7;
-  font-size: 16px;
-  margin-bottom: 40px;
+header nav{
+	float: right;
+	margin-top: 19px;
 }
 
-.btn-wrapper {
-  text-align: center;
+header nav ul {
+	border-right:  1px solid #e8e8e8;
 }
 
-.btn-wrapper p {
-  margin-bottom: 20px;
+
+header nav ul li{
+	float: left;
+	border-left:  1px solid #e8e8e8;
+	font-size: 16px;
+	padding-left: 25px;
+	padding-right: 25px;
+	
 }
 
-.signup {
-  background-color: #239b76;
+/* ========================================
+    メイン画像
+========================================= */
+div#mainimage{
+	width: 100%;
+	height: 392px;
+	background:url(images/mainimage.jpg) no-repeat top center;
+	margin: 0 auto;
 }
 
-.facebook {
-  background-color: #3b5998;
-  margin-right: 10px;
+div#mainimage_text{
+	width: 978px;
+	height: auto;
+	margin: 0 auto;
+	padding: 60px 0;
+}
+div#mainimage_text p{
+	font-size: 30px;
+	line-height: 40px;
+	font-weight: 900;
+	letter-spacing: 7px;
+	margin-bottom: 20px;
 }
 
-.twitter {
-  background-color: #55acee;
+
+div#mainimage_text dl{
+	width: 373px;
 }
 
-.btn {
-  padding: 8px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-align: center;
+div#mainimage_text dl dd{
+	margin: 20px 0;
+	font-size: 14px;
+	line-height: 21px;
 }
 
-.btn:hover {
-  opacity: 1;
+/* ========================================
+    授業内容
+========================================= */
+
+div#introduction{
+	width: 100%;
+	height: auto;
+	background-color: #ed7c7c;
+}
+div#introduction_wrapper{
+	width: 978px;
+	height: auto;
+	padding: 30px 0;
+	margin: 0 auto;
+
+}
+div#introduction_title{
+	width: 100%;
+	height: 43px;
+	
+	margin-bottom: 30px;
+}
+div#introduction_title h3{
+	color: #fff;
+	font-size: 24px;
+	font-weight: 900;
+	border-bottom: 4px solid #fff;
+	display: inline-block;
+	padding-bottom: 15px;
+	margin-right: 20px;
+
 }
 
-.fa {
-  margin-right: 5px;
+div#introduction_title span{
+	color: #fff;
+	font-size: 14px;
 }
 
-header {
-  height: 65px;
-  width: 100%;
-  background-color: rgba(34,49,52,0.9);
-  position :fixed;
-  top: 0;
-  z-index: 10;
+
+div#teacher_list{
+	width: 632px;
+	height: 222px;
+	background-color: #fff;
+	float: left;
+	padding: 15px;
 }
 
-.logo {
-  width: 124px;
-  margin-top: 20px;
+div#teacher_list h4{
+	font-size: 18px;
+	font-weight: 900;
+	margin-bottom: 10px;
 }
 
-.header-left {
-  float: left;
+div#teacher_list ul li{
+	width: 200px;
+	height: auto;
+	float: left;
+	margin-right: 16px;
 }
 
-.header-right {
-  float: right;
-  margin-right: -25px;
+div#teacher_list ul li#list_last{
+	margin-right: 0;
 }
 
-.header-right a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
-  display: block;
-  float: left;
-  transition: all 0.5s;
+div#teacher_list dl dt{
+	height: 131px;
+	margin-bottom: 8px;
 }
 
-.header-right a:hover {
-  background-color: rgba(255,255,255,0.3);
+div#teacher_list dl dd.teacher_name {
+	font-size: 14px;
+	font-weight: 900;
 }
 
-.lesson-wrapper {
-  height: 580px;
-  padding-bottom: 80px;
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #f7f7f7;
-  text-align: center;
+div#teacher_list dl dd.teacher_comment {
+	font-size: 12px;
+	line-height: 18px;
+}
+div#course_list{
+	width: 286px;
+	height: auto;
+	background-color: #fff;
+	float: right;
 }
 
-.heading {
-  padding-top: 80px;
-  padding-bottom: 50px;
-  color: #5f5d60;
+div#course_list h4{
+	font-size: 18px;
+	font-weight: 900;
+	padding: 15px 15px 10px 15px;
 }
 
-.heading h2 {
-  font-weight: normal;
+div#course_list ul li{
+	border-top: 1px solid #eae9e7;
+	padding: 15px;
 }
 
-.lesson {
-  float: left;
-  width: 25%;
+div#course_list ul li a{
+	display: block;
+	height: 37px;
+	width: auto;
+	line-height: 37px;
+	padding-left: 50px;
 }
 
-.lesson-icon {
-  position: relative;
+div#course_list ul li#ps a{
+	background: url(images/icon_photoshop.png) no-repeat left center;
 }
 
-.lesson-icon p {
-  position: absolute;
-  top: 37%;
-  width: 100%;
-  color: white;
+div#course_list ul li#ai a{
+	background: url(images/icon_ai.png) no-repeat left center;
 }
 
-.text-contents {
-  width: 80%;
-  display: inline-block;
-  margin-top: 15px;
-  font-size: 13px;
-  color: #b3aeb5;
+div#course_list ul li#pr a{
+	background: url(images/icon_pr.png) no-repeat left center;
 }
 
-.heading h3 {
-  font-weight: normal;
+div#course_list ul li#fw a{
+	background: url(images/icon_fw.png) no-repeat left center;
 }
 
-.message-wrapper {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  text-align: center;
+div#course_list ul li#dw a{
+	background: url(images/icon_dw.png) no-repeat left center;
 }
 
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  cursor: pointer;
-  box-shadow: 0px 7px #1a7940;
+
+/* ========================================
+    料金体制
+========================================= */
+
+div#price{
+	width: 100%;
+	height: 453px;
+	background-color: #fcfbfb;
 }
 
-.message:active {
-  position: relative;
-  top: 7px;
-  box-shadow: none;
+div#price_wrapper{
+	width: 978px;
+	height: auto;
+	padding: 30px 0;
+	margin: 0 auto;
 }
 
-footer img {
-  width: 125px;
+
+div#price div#price_title{
+	width: 100%;
+	height: 43px;
+	 
+	margin-bottom: 30px;
 }
 
-footer p {
-  color: #b3aeb5;
-  font-size: 12px;
+div#price div#price_title h3{
+	font-size: 24px;
+	font-weight: 900;
+	color: #474747;
+	display: inline-block;
+	border-bottom: 4px solid #e56d7c;
+	padding-bottom: 15px;
+	margin-right: 28px;
+
 }
 
-footer {
-  padding-top: 30px;
-  padding-bottom: 20px;
+div#price ul li{
+	width: 276px;
+	height: 290px;
+	background-color: #fff;
+	padding: 15px;
+	float: left;
+	margin-right: 30px;
+	position: relative;
+}
+div#price ul li#price_last_list{
+	margin-right: 0;
 }
 
-.menu-icon {
-  color: white;
-  float: right;
-  font-size: 25px;
-  padding: 21px 0;
-  display: none;
+div#price ul li p.plan{
+	font-size: 18px;
+	font-weight: bold;
+
 }
 
-.clear {
-  clear: left;
+div#price ul li p.price{
+	color: #e56d7c;
+	font-size: 28px;
+	font-weight: 900;
+	margin: 15px 0 30px 0;
+
 }
 
-@media all and (max-width: 1000px) {
-  .lesson {
-    width: 50%;
-    margin-bottom: 50px;
-  }
 
-  .lesson-wrapper {
-    height: 990px;
-  }
-
-  footer {
-    text-align: center;
-  }
+div#price ul li p.price span{
+	font-size: 16px;
+	margin-left: 10px;
 }
 
-@media all and (max-width: 750px) {
-  .top-wrapper h1 {
-    font-size: 32px;
-  }
-
-  .heading h2 {
-    font-size: 20px;
-  }
+div#price dl{
+	border-bottom: 1px dotted #eae9e7;
 }
 
-@media all and (max-width: 670px) {
-  .header-right {
-    display: none;
-  }
 
-  .menu-icon {
-    display: block;
-  }
+div#price dl dd{
+	border-top: 1px dotted #eae9e7;
+	line-height: 45px;
+}
 
-  .top-wrapper .btn {
-    width: 100%;
-  }
-
-  .twitter {
-    margin-top: 10px;
-  }
-
-  .top-wrapper {
-    text-align: left;
-  }
-
-  .top-wrapper h1 {
-    font-size: 24px;
-  }
-
-  .top-wrapper p {
-    font-size: 14px;
-  }
-
-  .lesson {
-    width: 100%;
-  }
-
-  .lesson-wrapper {
-    height: 1700px;
-  }
-
-  .message-wrapper .btn {
-    width: 100%;
-  }
+div#price a{
+	color: #fff;
+	font-weight: 900;
+	background-color: #e56d7c;
+	display: inline-block;
+	border-radius: 5px;
+	padding: 0 25px;
+	line-height: 36px;
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+}
+/* ========================================
+    フッター
+========================================= */
+footer{
+	width: 100%;
+	height: 73px;
+	background-color: #474747;
+	color: #fff;
+	text-align: center;
+	line-height: 73px;
 }
